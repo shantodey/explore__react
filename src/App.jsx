@@ -1,4 +1,5 @@
 import './App.css'
+import Todo from'./todo'
 
 function App() {
   return (
@@ -6,10 +7,9 @@ function App() {
       <Demodata></Demodata>
       <Newdata name="pattia" roll="759287" ></Newdata>
       <Arraydestruct fullanme='shanto dey' roll='759291'></Arraydestruct>
+      <Todo titel="mand dev" hasbecome={false}></Todo>
     </>
   )
-
-
 }
 
 function Demodata() {
