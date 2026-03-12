@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Demodata></Demodata>
+      <Newdata name="pattia" roll="759287" ></Newdata>
+      <Arraydestruct fullanme='shanto dey' roll='759291'></Arraydestruct>
+    </>
+  )
+
+
+}
+
+function Demodata() {
+  const students = [
+    { id: 1, name: "Shanto", age: 17 },
+    { id: 2, name: "Ratul", age: 20 },
+    { id: 3, name: "Rakib", age: 19 },
+  ];
+  return (
+    <>
+      <p className='border'> {students[0].id}my name is {students[0].name} and my age is {students[0].age}  </p>
+      <p className='border'>{students[1].id}my name is {students[1].name} and my age is {students[1].age}  </p>
+      <p className='border'>{students[2].id}my name is {students[2].name} and my age is {students[2].age}  </p>
     </>
   )
 }
 
+
+function Newdata(props) {
+  return (
+    <>
+      <div className='border'>
+        <p >name is {props.name} </p>
+        <p >roll is  {props.roll}</p>
+
+      </div>
+
+    </>
+  )
+}
+// const { fullanme, roll } = { fullanme="shanto", roll="759291" }
+function Arraydestruct({ fullanme, roll }) {
+  return (
+    <>
+      <div className='border'>
+        <p >name is {fullanme} </p>
+        <p >roll is  {roll}</p>
+
+      </div>
+    </>
+  )
+}
 export default App
